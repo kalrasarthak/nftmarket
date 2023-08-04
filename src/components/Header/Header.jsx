@@ -38,7 +38,7 @@ const Header = () => {
       } else {
         headerRef.current.classList.remove("header__shrink");
       }
-    });
+    })
 
     return () => {
       window.removeEventListener("scroll");
@@ -77,8 +77,14 @@ const Header = () => {
             </ul>
           </div>
 
-          <div className="nav__right d-flex align-items-center gap-5 ">
-            <button className="btn d-flex gap-2 align-items-center">
+          <div className="nav__right d-flex align-items-center gap-3 ">
+            <button className="btn d-flex gap-1 align-items-center">
+              <span>
+                <i class="ri-user-3-line"></i>
+              </span>
+              <Link to="/login">Login</Link>
+            </button>
+            <button className="btn d-flex gap-1 align-items-center">
               <span>
                 <i class="ri-wallet-line"></i>
               </span>
@@ -86,13 +92,7 @@ const Header = () => {
 
             </button>
 
-            <button className="btn d-flex gap-2 align-items-center">
-              <span>
-                <i class="ri-user-add-fill"></i>
-              </span>
-              <Link to="/wallet">Login</Link>
 
-            </button>
 
             <span className="mobile__menu">
               <i class="ri-menu-line" onClick={toggleMenu}></i>
